@@ -1,76 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cash for Trash</title>
+    <!-- Google Fonts Link for Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
-        /* General Styles */
-.upload-image-button {
-        display: inline-block;
-        background-color: #007BFF;
-        color: white;
-        padding: 10px 20px;
-        font-size: 16px;
-        font-weight: bold;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s, transform 0.2s;
-        text-align: center;
-    }
-
-    .upload-image-button:hover {
-        background-color: #0056b3;
-        transform: scale(1.05);
-    }
-
-    .upload-image-button:active {
-        transform: scale(0.95);
-    }
-
-    #image-preview {
-        margin-top: 10px;
-        max-width: 200px;
-        height: auto;
-        display: block;
-    }
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('cash for trash.jpg'); /* Replace with your image URL */
-    background-size: cover; /* Make the image cover the entire page */
-    background-position: center; /* Position the image in the center */
-    background-attachment: fixed; /* Keep the image fixed while scrolling */
-}
-
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('cash for trash.jpg'); /* Replace with your background image URL */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
-
         h1 {
-            font-size: 36px;
-            color:#000000;
+            font-size: 30px;
+            color: #000;
         }
-
         a {
             text-decoration: none;
             color: #ffcc00;
             font-size: 20px;
         }
-
         a:hover {
             text-decoration: underline;
         }
-
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 30px;
             background-color: #fff;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-
         button {
             background-color: #28a745;
             color: white;
@@ -80,14 +45,12 @@ body {
             cursor: pointer;
             font-size: 16px;
         }
-
         button:hover {
             background-color: #218838;
         }
-
-        /* Welcome Page */
+        /* Welcome Page Styles */
         .welcome-container {
-            background-image: url('background.jpg');
+            background-image: url('background.jpg'); /* Replace with your welcome background image */
             background-size: cover;
             color: white;
             text-align: center;
@@ -96,12 +59,10 @@ body {
             flex-direction: column;
             justify-content: center;
         }
-
         .welcome-container h1 {
             font-size: 50px;
         }
-
-        /* Registration Page */
+        /* Registration Page Styles */
         .registration-container input, .registration-container button {
             width: 100%;
             padding: 12px;
@@ -109,44 +70,39 @@ body {
             font-size: 16px;
             border-radius: 4px;
         }
-
         .registration-container input {
             border: 1px solid #ccc;
         }
-
         .registration-container button {
             background-color: #007bff;
             color: white;
         }
-
         /* Waste Types Page */
         .waste-types-container {
             text-align: center;
             padding: 50px 0;
         }
-
         .waste-types-container table {
             width: 100%;
             margin-top: 20px;
         }
-
         .waste-types-container td {
             padding: 20px;
             text-align: center;
         }
-
         .waste-types-container img {
             width: 100px;
             height: 100px;
             object-fit: cover;
         }
-
         .waste-types-container a {
             color: #007bff;
             font-size: 18px;
             text-decoration: none;
         }
-
+        .waste-types-container p {
+            color: green;
+        }
         /* Upload Waste Page */
         .upload-container textarea, .upload-container input {
             width: 100%;
@@ -155,24 +111,16 @@ body {
             font-size: 16px;
             border-radius: 4px;
         }
-
         .upload-container button {
             background-color: #28a745;
             color: white;
             font-size: 18px;
             padding: 10px 20px;
         }
-
         .upload-container textarea {
             height: 150px;
         }
-
-        /* Green Text for Waste Types Page */
-        .waste-types-container p {
-            color: green;
-        }
-
-        /* Back Button Style */
+        /* Back Button */
         .back-button {
             background-color: #28a745;
             color: white;
@@ -185,48 +133,155 @@ body {
             display: block;
             margin: 0 auto;
         }
-
         .back-button:hover {
             background-color: #218838;
         }
-
-        .upload-container .upload-image-button {
-            background-color: #007bff;
-            margin-top: 20px;
-        }
-
-        .upload-container .upload-image-button:hover {
-            background-color: #0056b3;
-        }
-
-        /* End Page Styles */
-        .contact-details {
-            margin-top: 20px;
+        /* Upload Image Button */
+        .upload-image-button {
+            display: inline-block;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
             font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
             text-align: center;
         }
-
+        .upload-image-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        .upload-image-button:active {
+            transform: scale(0.95);
+        }
+        #image-preview {
+            margin-top: 10px;
+            max-width: 200px;
+            height: auto;
+            display: block;
+        }
         .uploaded-image {
             margin-top: 20px;
             text-align: center;
         }
-
         .uploaded-image img {
             max-width: 100%;
             max-height: 300px;
             object-fit: contain;
         }
-
+        /* Updated About Us Section */
+        #about-us {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            color: #333;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        #about-us h1 {
+            font-size: 35px;
+            color: #2c3e50;
+            border-bottom: 3px solid #27ae60;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        #about-us h2 {
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            border-left: 4px solid #27ae60;
+            padding-left: 10px;
+        }
+        #about-us h3 {
+            font-size: 1.5em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        #about-us p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .team-img {
+            width: 100%;
+            max-width: 300px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 5px;
+        }
+        .step {
+            background-color:#e9f5e9;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 5px solid #27ae60;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+        .video-container video {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border: 1px solid #ddd;
+        }
+        .cta {
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #27ae60;
+            margin-top: 30px;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Welcome Page -->
-    <div class="welcome-container" id="welcome-page" style="display: block;">
-        <h1 style="color:black;font-family:italic";>Welcome to Ca$h for Tra$h</h1>
-        <p style="color:brown";><i>"Your waste, our responsibility. We collect it and you earn from it!"</i></p>
-        <button onclick="showRegistrationPage()">Go to Registration</button>
+   <!-- Welcome Page -->
+<div class="welcome-container" id="welcome-page" style="display: block;">
+    <h1 id="welcome-heading" style="color:black;font-family:italic";>Welcome to Ca$h for Tra$h</h1>
+    <p style="color:brown";><i>"Your waste, our responsibility. We collect it and you earn from it!"</i></p>
+    <button onclick="showRegistrationPage()">Go to Registration</button>
+    <button onclick="toggleAboutUs()">About Us</button>
+
+    <!-- Updated About Us Section -->
+        <div id="about-us">
+            <div class="container">
+                <h1>About Us</h1>
+                               <p>  Our passion drives us to create a cleaner, greener planet by turning trash into treasure.
+</p>
+                <h2>Why We Started "Cash for Trash"</h2>
+                <p>
+ Cash for Trash helps keep the environment clean by collecting small waste that is often left on streets or in water. While big waste is picked up by the municipality, small waste is usually ignored.Cash for Trash provides an easy way for people to dispose of small waste responsibly while earning money from it. By connecting users with waste collectors, we encourage recycling and proper waste management. ♻️💰
+</p>
+                <h2>How It Works</h2>
+                <p>
+                    Our platform allows you to schedule waste pickups and earn money based on the weight of your waste. This not only encourages recycling but also helps create a cleaner, healthier environment.
+                </p>
+                
+                <h2>Process Video</h2>
+                <p>
+                    Watch our video that explains the journey of waste—from being left on roads to being properly recycled.
+                </p>
+                <div class="video-container">
+                   <video width="100%" controls autoplay muted loop>
+  <source src="cash.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+                </div>
+                <p class="cta">
+                    Join us today and be part of the movement to transform waste into wealth while protecting our planet.
+                </p>
+            </div>
+        </div>
     </div>
+
 
     <!-- Registration Page -->
 <div class="container" id="registration-page" style="display: none;">
@@ -240,7 +295,8 @@ body {
         <input type="tel" id="phone" required>
         <button type="button" onclick="validateForm()">Submit</button>
     </form>
-    <button class="back-button" onclick="goBack()">Back</button>
+   <button class="back-button" onclick="goBack()">Back</button>
+
 </div>
 
     <!-- Waste Types Page -->
@@ -309,7 +365,7 @@ body {
         </div>
         <div class="contact-details">
             <h2>Contact Us</h2>
-            <p style="font-family:italic;color:"black">Eco Warriors</p>
+            <p style="font-family:italic;color:"black">P.Varalakshmi<br>ch.Venkata Pooja</p>
             <p style="font-family:italic;color:"black">Phone:+91 9032793033</p>
             <p style="font-family:italic;color:"black">Email: support@cashfortrash.com</p>
         </div>
@@ -367,8 +423,7 @@ body {
             });
         }
 
-        // Navigate back to the previous page
-       // Navigate back to the previous page correctly
+        // Navigate back to the previous page correctly
 function goBack() {
     if (pageHistory.length > 1) {
         pageHistory.pop();  // Remove the current page from history
@@ -379,8 +434,11 @@ function goBack() {
         if (lastPage) {
             document.getElementById(lastPage).style.display = 'block';
         }
+    } else {
+        showWelcomePage();  // If we're on the welcome page, go back to the home page
     }
 }
+
 
 
         // Handle file upload (Image)
@@ -471,6 +529,15 @@ function validateForm() {
         );
     } else {
         alert("Geolocation is not supported by your browser.");
+    }
+}
+// Function to toggle the About Us section visibility
+function toggleAboutUs() {
+    const aboutUsSection = document.getElementById('about-us');
+    if (aboutUsSection.style.display === 'none') {
+        aboutUsSection.style.display = 'block';  // Show About Us section
+    } else {
+        aboutUsSection.style.display = 'none';   // Hide About Us section
     }
 }
 
